@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interval negation N(in,n)[X,Y]</title>
+<!-- KaTeX 0.16.9 (MIT License): math rendering, with fonts embedded (works offline) -->
+<link rel="stylesheet" href="katex.min.css">
+<!-- Application styles -->
+<link rel="stylesheet" href="Atanassov_Intervals_Negation.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>Interval negation&nbsp; N<sub>&#8712;,n</sub>[X, Y] &nbsp;<span style="font-weight:400;color:var(--muted);font-size:1rem">(Atanassov intervals)</span></h1>
+  <p class="sub">Supplementary material &mdash; <i>Fuzzy Sets and Systems</i>. Exact rational arithmetic.</p>
+
+  <h2>Matrix A (4&times;4)</h2>
+  <p class="caption">Enter each entry as a fraction (e.g. <code>1/6</code>) or a decimal (e.g. <code>0.5</code>).</p>
+  <table class="mat"><tbody>
+    <tr><td><input type="text" id="a00"></td><td><input type="text" id="a01"></td><td><input type="text" id="a02"></td><td><input type="text" id="a03"></td></tr>
+    <tr><td><input type="text" id="a10"></td><td><input type="text" id="a11"></td><td><input type="text" id="a12"></td><td><input type="text" id="a13"></td></tr>
+    <tr><td><input type="text" id="a20"></td><td><input type="text" id="a21"></td><td><input type="text" id="a22"></td><td><input type="text" id="a23"></td></tr>
+    <tr><td><input type="text" id="a30"></td><td><input type="text" id="a31"></td><td><input type="text" id="a32"></td><td><input type="text" id="a33"></td></tr>
+  </tbody></table>
+  <div class="controls">
+    <div>
+      <label for="example">Load example</label>
+      <select id="example">
+        <option>Example 1</option><option selected>Example 2</option>
+        <option>Example 3</option><option>Example 4</option>
+      </select>
+    </div>
+    <button class="ghost" id="load">Load into the table</button>
+  </div>
+
+  <h2>Atanassov intervals&nbsp; ([x1,x2],[x3,x4])&nbsp; with&nbsp; x2 + x4 &le; 1</h2>
+  <div class="intervals">
+    <div><label for="x1">x1&nbsp; (X lower)</label><input type="text" id="x1" value="1/4"></div>
+    <div><label for="x2">x2&nbsp; (X upper)</label><input type="text" id="x2" value="1/2"></div>
+    <div><label for="x3">x3&nbsp; (Y lower)</label><input type="text" id="x3" value="0"></div>
+    <div><label for="x4">x4&nbsp; (Y upper)</label><input type="text" id="x4" value="1/4"></div>
+  </div>
+
+  <button id="compute">Compute</button>
+
+  <div id="output"></div>
+</div>
+
+<!-- KaTeX rendering engine (loaded before the application script) -->
+<script src="katex.min.js"></script>
+<!-- Application logic -->
+<script src="Atanassov_Intervals_Negation.js"></script>
+</body>
+</html>
